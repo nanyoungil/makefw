@@ -10,7 +10,7 @@ tmp/
 *.swp
 *~.nib
 local.properties
-.settings/
+#.settings/
 .loadpath
 .recommenders
 
@@ -119,7 +119,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# target folder uder files
+# target folder under files
 /target/
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,java,windows
