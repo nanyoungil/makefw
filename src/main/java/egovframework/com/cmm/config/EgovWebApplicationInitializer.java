@@ -38,9 +38,15 @@ import jakarta.servlet.ServletException;
  */
 
 
+<<<<<<< HEAD
 public class EgovWebApplicationInitializer implements WebApplicationInitializer {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EgovWebApplicationInitializer.class);
+=======
+public class DaimWebApplicationInitializer implements WebApplicationInitializer {
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(DaimWebApplicationInitializer.class);
+>>>>>>> branch 'develop' of https://github.com/nanyoungil/makefw.git
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
