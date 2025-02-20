@@ -38,9 +38,9 @@ import jakarta.servlet.ServletException;
  */
 
 
-public class DaimWebApplicationInitializer implements WebApplicationInitializer {
+public class EgovWebApplicationInitializer implements WebApplicationInitializer {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(DaimWebApplicationInitializer.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(EgovWebApplicationInitializer.class);
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
