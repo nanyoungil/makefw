@@ -387,8 +387,8 @@ public class EgovStringUtil {
 	 */
 	public static String nullConvert(Object src) {
 		//if (src != null && src.getClass().getName().equals("java.math.BigDecimal")) {
-		if (src != null && src instanceof java.math.BigDecimal) {
-			return ((BigDecimal)src).toString();
+		if (src != null && src instanceof java.math.BigDecimal decimal) {
+			return decimal.toString();
 		}
 
 		if (src == null || src.equals("null")) {
@@ -407,8 +407,8 @@ public class EgovStringUtil {
 	 */
 	public static String nullConvertInt(Object src) {
 		//if (src != null && src.getClass().getName().equals("java.math.BigDecimal")) {
-		if (src != null && src instanceof java.math.BigDecimal) {
-			return ((BigDecimal)src).toString();
+		if (src != null && src instanceof java.math.BigDecimal decimal) {
+			return decimal.toString();
 		}
 
 		if (src == null || src.equals("null")) {

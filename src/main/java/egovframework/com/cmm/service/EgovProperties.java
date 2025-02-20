@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -119,7 +119,7 @@ public class EgovProperties {
 
 		String src = property.replace("\\", FILE_SEPARATOR).replace("/", FILE_SEPARATOR);
 
-		if (Files.exists(Paths.get(EgovWebUtil.filePathBlackList(src)))) { //2022.01 Potential Path Traversal
+		if (Files.exists(Path.of(EgovWebUtil.filePathBlackList(src)))) { //2022.01 Potential Path Traversal
 			Properties props = loadPropertiesFromFile(src);
 
 			Enumeration<?> plist = props.propertyNames();
