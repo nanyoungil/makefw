@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="egovframework.com.daim.fw.work.sample.mapper.SampleMapper">
+
+	<select id="selectSample" resultMap="map">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.selectSample 샘플 조회(단건) **/
+	SELECT A.WORD_ID
+		 , A.WORD_NM
+		 , A.ENG_NM
+		 , A.WORD_DC
+		 , A.SYNONM
+		 , A.FRST_REGIST_PNTTM
+		 , A.FRST_REGISTER_ID
+		 , A.LAST_UPDT_PNTTM
+		 , A.LAST_UPDUSR_ID
+	FROM   COMTNWORDDICARYINFO A
+	WHERE  A.WORD_ID = #{WORD_ID}
+	</select>
+	
+	<select id="selectSampleList" parameterType="map" resultType="list">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.selectSampleList 샘플 조회(다건) **/
+	SELECT A.WORD_ID
+		 , A.WORD_NM
+		 , A.ENG_NM
+		 , A.WORD_DC
+		 , A.SYNONM
+		 , A.FRST_REGIST_PNTTM
+		 , A.FRST_REGISTER_ID
+		 , A.LAST_UPDT_PNTTM
+		 , A.LAST_UPDUSR_ID
+	FROM   COMTNWORDDICARYINFO A
+	WHERE  A.WORD_NM = #{WORD_NM}
+		AND A.ENG_NM = #{ENG_NM}
+		AND A.WORD_DC = #{WORD_DC}
+		AND A.SYNONM = #{SYNONM}
+	</select>
+		
+	<select id="selectSampleListTotCnt" parameterType="map" resultType="int">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.selectSampleListTotCnt 샘플 조회(다건 건수) **/
+	</select>
+
+	<insert id="insertSample" parameterType="map">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.insertSample 샘플 입력((단건)) **/
+	INSERT
+	INTO   COMTNWORDDICARYINFO
+		 (
+		   WORD_ID
+		   , WORD_NM
+		   , ENG_NM
+		   , WORD_DC
+		   , SYNONM
+		   , FRST_REGIST_PNTTM
+		   , FRST_REGISTER_ID
+		   , LAST_UPDT_PNTTM
+		   , LAST_UPDUSR_ID
+		 )
+		 VALUES
+		 (
+		   #{WORD_ID}
+		   , #{WORD_NM}
+		   , #{ENG_NM}
+		   , #{WORD_DC}
+		   , #{SYNONM}
+		   , SYSDATE
+		   , #{FRST_REGISTER_ID}
+		   , SYSDATE
+		   , #{LAST_UPDUSR_ID}
+		 )
+	</insert>
+
+	<update id="updateSample">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.updateSample 샘플 수정(단건) **/
+	</update>
+
+	<delete id="deleteSample">
+	/** ewgovframework.com.daim.fw.work.mapper.SampleMapper.deleteSample 샘플 삭제(단건) **/
+	</delete>
+	
+</mapper>
