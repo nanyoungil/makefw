@@ -34,7 +34,7 @@ public class SampleController {
 
 		mav.addObject("list", sampleService.selectSample(param));
 		
-		//mav.setViewName("/page");
+		mav.setViewName("page/sample/Sample");
 
 		return mav;
 

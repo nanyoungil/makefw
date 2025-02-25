@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.daim</groupId>
-	<artifactId>bootdemo</artifactId>
+	<artifactId>makefw</artifactId>
 	<version>0.0.1</version>
-	<name>bootdemo</name>
+	<name>makefw</name>
 	<description>demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -147,6 +147,8 @@
 	</dependencies>
 
 	<build>
+		
+		<finalName>makefw</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
